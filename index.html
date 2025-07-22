@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wood & Brick Construction | Complete Remodeling Services</title>
+    <title id="page-title">Remodelaciones Asiáticas | Complete Remodeling Services</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/foto_mejorada.png');
             background-size: cover;
             background-position: center;
         }
@@ -43,7 +44,7 @@
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-2">
                     <i class="fas fa-hammer text-2xl text-amber-300"></i>
-                    <span class="text-xl font-bold">Wood & Brick Construction</span>
+                    <span class="text-xl font-bold" id="brand-name">Remodelaciones Asiáticas</span>
                 </div>
                 
                 <!-- Mobile menu button -->
@@ -52,20 +53,36 @@
                 </button>
                 
                 <!-- Desktop menu -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="#services" class="hover:text-amber-300 transition">Services</a>
-                    <a href="#about" class="hover:text-amber-300 transition">About</a>
-                    <a href="#gallery" class="hover:text-amber-300 transition">Gallery</a>
-                    <a href="#contact" class="hover:text-amber-300 transition">Contact</a>
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#services" class="hover:text-amber-300 transition" id="nav-services">Services</a>
+                    <a href="#about" class="hover:text-amber-300 transition" id="nav-about">About</a>
+                    <a href="#gallery" class="hover:text-amber-300 transition" id="nav-gallery">Gallery</a>
+                    <a href="#contact" class="hover:text-amber-300 transition" id="nav-contact">Contact</a>
+                    
+                    <!-- Language Selector -->
+                    <div class="relative">
+                        <select id="language-selector" class="bg-amber-800 text-white py-1 px-3 rounded-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="zh">中文</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             
             <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-2 pb-2">
-                <a href="#services" class="block py-2 hover:text-amber-300 transition">Services</a>
-                <a href="#about" class="block py-2 hover:text-amber-300 transition">About</a>
-                <a href="#gallery" class="block py-2 hover:text-amber-300 transition">Gallery</a>
-                <a href="#contact" class="block py-2 hover:text-amber-300 transition">Contact</a>
+                <a href="#services" class="block py-2 hover:text-amber-300 transition" id="mobile-nav-services">Services</a>
+                <a href="#about" class="block py-2 hover:text-amber-300 transition" id="mobile-nav-about">About</a>
+                <a href="#gallery" class="block py-2 hover:text-amber-300 transition" id="mobile-nav-gallery">Gallery</a>
+                <a href="#contact" class="block py-2 hover:text-amber-300 transition" id="mobile-nav-contact">Contact</a>
+                <div class="py-2">
+                    <select id="mobile-language-selector" class="bg-amber-800 text-white py-1 px-3 rounded-md w-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
@@ -73,11 +90,11 @@
     <!-- Hero Section -->
     <header class="hero-bg text-white py-20 md:py-32 relative">
         <div class="container mx-auto px-4 text-center fade-in">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Crafting Your Dream Spaces</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expert remodeling and construction services with a natural touch of wood and brick</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" id="hero-title">Crafting Your Dream Spaces</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" id="hero-subtitle">Expert remodeling and construction services with a natural touch of wood and brick</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Get a Free Quote</a>
-                <a href="#services" class="bg-transparent hover:bg-amber-900 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300">Our Services</a>
+                <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" id="hero-quote-btn">Get a Free Quote</a>
+                <a href="#services" class="bg-transparent hover:bg-amber-900 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300" id="hero-services-btn">Our Services</a>
             </div>
         </div>
     </header>
@@ -86,92 +103,92 @@
     <section id="services" class="py-16 bg-white brick-pattern">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900">Our Comprehensive Services</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900" id="services-title">Our Comprehensive Services</h2>
                 <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
                 <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3');"></div>
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/pushing-boundaries-11-exteriors-that-use-fabric-for-protection-shape-and-longevity_1.png');"></div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-amber-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-home text-amber-700 text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-amber-900">Complete Remodeling</h3>
+                            <h3 class="text-xl font-bold text-amber-900" id="service1-title">Complete Remodeling</h3>
                         </div>
-                        <p class="text-gray-600">Full-service remodeling for both heavy and lightweight structures, transforming your space from concept to completion.</p>
+                        <p class="text-gray-600" id="service1-description">Full-service remodeling for both heavy and lightweight structures, transforming your space from concept to completion.</p>
                     </div>
                 </div>
                 
                 <!-- Service 2 -->
                 <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3');"></div>
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/1715155354158971.png');"></div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-amber-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-couch text-amber-700 text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-amber-900">Furniture Restoration</h3>
+                            <h3 class="text-xl font-bold text-amber-900" id="service2-title">Furniture Restoration</h3>
                         </div>
-                        <p class="text-gray-600">Expert restoration of wooden furniture, bringing new life to your cherished pieces with traditional craftsmanship.</p>
+                        <p class="text-gray-600" id="service2-description">Expert restoration of wooden furniture, bringing new life to your cherished pieces with traditional craftsmanship.</p>
                     </div>
                 </div>
                 
                 <!-- Service 3 -->
                 <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3');"></div>
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/pv_station_operation_2022041101_d787c69cb3.png');"></div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-amber-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-solar-panel text-amber-700 text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-amber-900">Solar Panel Installation</h3>
+                            <h3 class="text-xl font-bold text-amber-900" id="service3-title">Solar Panel Installation</h3>
                         </div>
-                        <p class="text-gray-600">Professional installation of photovoltaic (solar) panels to make your home energy efficient and sustainable.</p>
+                        <p class="text-gray-600" id="service3-description">Professional installation of photovoltaic (solar) panels to make your home energy efficient and sustainable.</p>
                     </div>
                 </div>
                 
                 <!-- Service 4 -->
                 <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3');"></div>
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/90.png');"></div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-amber-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-tools text-amber-700 text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-amber-900">Roofing & Tile Work</h3>
+                            <h3 class="text-xl font-bold text-amber-900" id="service4-title">Roofing & Tile Work</h3>
                         </div>
-                        <p class="text-gray-600">Expert roofing solutions and tile installation to protect and enhance your home's exterior.</p>
+                        <p class="text-gray-600" id="service4-description">Expert roofing solutions and tile installation to protect and enhance your home's exterior.</p>
                     </div>
                 </div>
                 
                 <!-- Service 5 -->
                 <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3');"></div>
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/full_Orbis_Image_RGB_3000x2000px_72DPI.png');"></div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-amber-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-bath text-amber-700 text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-amber-900">Plumbing & Wall Restoration</h3>
+                            <h3 class="text-xl font-bold text-amber-900" id="service5-title">Plumbing & Wall Restoration</h3>
                         </div>
-                        <p class="text-gray-600">Faucet replacement and wall restoration services to refresh your home's interior with precision and care.</p>
+                        <p class="text-gray-600" id="service5-description">Faucet replacement and wall restoration services to refresh your home's interior with precision and care.</p>
                     </div>
                 </div>
                 
                 <!-- Service 6 -->
                 <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3');"></div>
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('images/1715155312970512.png');"></div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
                             <div class="bg-amber-100 p-3 rounded-full mr-4">
                                 <i class="fas fa-warehouse text-amber-700 text-xl"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-amber-900">Custom Furniture</h3>
+                            <h3 class="text-xl font-bold text-amber-900" id="service6-title">Custom Furniture</h3>
                         </div>
-                        <p class="text-gray-600">Bespoke closets, kitchens, libraries and home furniture crafted to your exact specifications and style.</p>
+                        <p class="text-gray-600" id="service6-description">Bespoke closets, kitchens, libraries and home furniture crafted to your exact specifications and style.</p>
                     </div>
                 </div>
             </div>
@@ -183,32 +200,19 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center">
                 <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-amber-900">Our Story & Philosophy</h2>
-                    <p class="text-gray-700 mb-4">Founded on a passion for craftsmanship and natural materials, Wood & Brick Construction brings warmth and authenticity to every project we undertake.</p>
-                    <p class="text-gray-700 mb-4">We believe in the timeless beauty of wood and brick - materials that age gracefully and tell a story. Our team combines traditional techniques with modern innovation to create spaces that are both functional and full of character.</p>
-                    <p class="text-gray-700 mb-6">From complete home renovations to custom furniture pieces, we approach each project with the same attention to detail and commitment to quality.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-amber-700 mr-2"></i>
-                            <span>15+ Years Experience</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-amber-700 mr-2"></i>
-                            <span>Licensed & Insured</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-check-circle text-amber-700 mr-2"></i>
-                            <span>Sustainable Practices</span>
-                        </div>
-                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-amber-900" id="about-title">Our Story & Philosophy</h2>
+                    <p class="text-gray-700 mb-4" id="about-p4">“修身齐家治国平天下”</p>
+                    <p class="text-gray-700 mb-4" id="about-p3">Xiū shēn qí jiā zhì guó píng tiān xià</p>
+                    <p class="text-gray-700 mb-4" id="about-p1">Cultiva tu ser, armoniza tu hogar, mejora tu entorno y harás del mundo un mejor lugar.</p>
+                    <p class="text-gray-700 mb-6" id="about-p2">Esta antigua sabiduría de Confucio guía nuestro trabajo: creemos que cada transformación comienza desde adentro. Por eso, cada proyecto que realizamos refleja un equilibrio entre funcionalidad, estética y bienestar, respetando tanto la historia de quienes habitan un espacio como sus sueños futuros.</p>
                 </div>
                 <div class="lg:w-1/2 relative">
                     <div class="relative rounded-lg overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3" alt="Carpenter at work" class="w-full h-auto">
+                        <img src="images/640-1910091041177104.png" alt="Carpenter at work" class="w-full h-auto">
                         <div class="absolute inset-0 bg-gradient-to-t from-amber-900/50 to-transparent"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white">
-                            <h3 class="text-xl font-bold">Handcrafted Excellence</h3>
-                            <p>Every detail matters in our work</p>
+                            <h3 class="text-xl font-bold" id="about-card-title">Handcrafted Excellence</h3>
+                            <p id="about-card-subtitle">Every detail matters in our work</p>
                         </div>
                     </div>
                 </div>
@@ -220,33 +224,33 @@
     <section id="gallery" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900">Our Work</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900" id="gallery-title">Our Work</h2>
                 <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
             </div>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3" alt="Restored furniture" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="images/20180522110323-9e4c9ea4-la.png" alt="Restored furniture" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1600566752229-250dd4b1af7f?ixlib=rb-4.0.3" alt="Custom kitchen" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="images/18533694_1456211991375_690x460.png" alt="Custom kitchen" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3" alt="Wooden library" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="images/2023080910554960020.png" alt="Wooden library" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3" alt="House exterior" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="images/interior-design1-4.png" alt="House exterior" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3" alt="Bathroom remodel" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="images/1-1Z4111629490-L.png" alt="Bathroom remodel" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
                 <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3" alt="Solar panel installation" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                    <img src="images/MG_4052.png" alt="Solar panel installation" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
                 </div>
             </div>
             
             <div class="text-center mt-8">
-                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" id="gallery-view-more-btn">
                     View More Projects
                 </a>
             </div>
@@ -257,104 +261,47 @@
     <section id="contact" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900">Get In Touch</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900" id="contact-title">Get In Touch</h2>
                 <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
             </div>
             
-            <div class="flex flex-col lg:flex-row gap-8">
-                <div class="lg:w-1/2">
+            <div class="flex flex-col">
+                <div class="">
                     <form class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
-                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <label for="name" class="block text-gray-700 mb-2" id="contact-name-label">Name</label>
                                 <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                             </div>
                             <div>
-                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <label for="email" class="block text-gray-700 mb-2" id="contact-email-label">Email</label>
                                 <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                             </div>
                         </div>
                         <div>
-                            <label for="phone" class="block text-gray-700 mb-2">Phone</label>
+                            <label for="phone" class="block text-gray-700 mb-2" id="contact-phone-label">Phone</label>
                             <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
                         </div>
                         <div>
-                            <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
+                            <label for="service" class="block text-gray-700 mb-2" id="contact-service-label">Service Interested In</label>
                             <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-                                <option value="">Select a service</option>
-                                <option value="remodeling">Complete Remodeling</option>
-                                <option value="furniture">Furniture Restoration</option>
-                                <option value="solar">Solar Panel Installation</option>
-                                <option value="roofing">Roofing & Tile Work</option>
-                                <option value="plumbing">Plumbing & Wall Restoration</option>
-                                <option value="custom">Custom Furniture</option>
+                                <option value="" id="contact-select-default">Select a service</option>
+                                <option value="remodeling" id="contact-service-remodeling">Complete Remodeling</option>
+                                <option value="furniture" id="contact-service-furniture">Furniture Restoration</option>
+                                <option value="solar" id="contact-service-solar">Solar Panel Installation</option>
+                                <option value="roofing" id="contact-service-roofing">Roofing & Tile Work</option>
+                                <option value="plumbing" id="contact-service-plumbing">Plumbing & Wall Restoration</option>
+                                <option value="custom" id="contact-service-custom">Custom Furniture</option>
                             </select>
                         </div>
                         <div>
-                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <label for="message" class="block text-gray-700 mb-2" id="contact-message-label">Message</label>
                             <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300" id="contact-send-btn">
                             Send Message
                         </button>
                     </form>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <div class="bg-amber-50 p-8 rounded-lg shadow-md h-full">
-                        <h3 class="text-2xl font-bold text-amber-900 mb-6">Contact Information</h3>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-map-marker-alt text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Our Location</h4>
-                                    <p class="text-gray-600">123 Construction Lane, Building City, BC 12345</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-phone-alt text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Phone</h4>
-                                    <p class="text-gray-600">(123) 456-7890</p>
-                                    <p class="text-gray-600">Mon-Fri: 8am-6pm</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start">
-                                <div class="bg-amber-100 p-3 rounded-full mr-4">
-                                    <i class="fas fa-envelope text-amber-700"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800">Email</h4>
-                                    <p class="text-gray-600">contact@woodbrickconstruction.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8">
-                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
-                                    <i class="fab fa-pinterest-p"></i>
-                                </a>
-                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
-                                    <i class="fab fa-houzz"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -367,16 +314,16 @@
                 <div class="mb-4 md:mb-0">
                     <div class="flex items-center space-x-2">
                         <i class="fas fa-hammer text-2xl text-amber-300"></i>
-                        <span class="text-xl font-bold">Wood & Brick Construction</span>
+                        <span class="text-xl font-bold" id="footer-brand-name">Remodelaciones Asiáticas</span>
                     </div>
-                    <p class="text-amber-200 mt-2">Crafting spaces with natural warmth</p>
+                    <p class="text-amber-200 mt-2" id="footer-brand-tagline">Crafting spaces with natural warmth</p>
                 </div>
                 
                 <div class="flex flex-col items-center md:items-end">
-                    <p class="mb-2">© 2023 Wood & Brick Construction. All rights reserved.</p>
+                    <p class="mb-2" id="footer-copyright">© 2025 Remodelaciones Asiáticas All rights reserved.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-amber-200 hover:text-white transition">Privacy Policy</a>
-                        <a href="#" class="text-amber-200 hover:text-white transition">Terms of Service</a>
+                        <a href="#" class="text-amber-200 hover:text-white transition" id="footer-privacy">Privacy Policy</a>
+                        <a href="#" class="text-amber-200 hover:text-white transition" id="footer-terms">Terms of Service</a>
                     </div>
                 </div>
             </div>
@@ -389,6 +336,271 @@
     </button>
 
     <script>
+        // Translations object
+        const translations = {
+            en: {
+                // Page Title
+                'page-title': 'Remodelaciones Asiáticas | Complete Remodeling Services',
+                // Navigation
+                'brand-name': 'Remodelaciones Asiáticas',
+                'nav-services': 'Services',
+                'nav-about': 'About',
+                'nav-gallery': 'Gallery',
+                'nav-contact': 'Contact',
+                'mobile-nav-services': 'Services',
+                'mobile-nav-about': 'About',
+                'mobile-nav-gallery': 'Gallery',
+                'mobile-nav-contact': 'Contact',
+                // Hero Section
+                'hero-title': 'Crafting Your Dream Spaces',
+                'hero-subtitle': 'Expert remodeling and construction services with a natural touch of wood and brick',
+                'hero-quote-btn': 'Get a Free Quote',
+                'hero-services-btn': 'Our Services',
+                // Services Section
+                'services-title': 'Our Comprehensive Services',
+                'service1-title': 'Complete Remodeling',
+                'service1-description': 'Full-service remodeling for both heavy and lightweight structures, transforming your space from concept to completion.',
+                'service2-title': 'Furniture Restoration',
+                'service2-description': 'Expert restoration of wooden furniture, bringing new life to your cherished pieces with traditional craftsmanship.',
+                'service3-title': 'Solar Panel Installation',
+                'service3-description': 'Professional installation of photovoltaic (solar) panels to make your home energy efficient and sustainable.',
+                'service4-title': 'Roofing & Tile Work',
+                'service4-description': 'Expert roofing solutions and tile installation to protect and enhance your home\'s exterior.',
+                'service5-title': 'Plumbing & Wall Restoration',
+                'service5-description': 'Faucet replacement and wall restoration services to refresh your home\'s interior with precision and care.',
+                'service6-title': 'Custom Furniture',
+                'service6-description': 'Bespoke closets, kitchens, libraries and home furniture crafted to your exact specifications and style.',
+                // About Section
+                'about-title': 'Our Story & Philosophy',
+                'about-p1': 'Cultivate your self, harmonize your home, improve your environment, and you will make the world a better place.',
+                'about-p2': 'This ancient wisdom of Confucius guides our work: we believe that every transformation begins from within. Therefore, each project we undertake reflects a balance between functionality, aesthetics, and well-being, respecting both the history of those who inhabit a space and their future dreams.',
+                'about-p3': 'From complete home renovations to custom furniture pieces, we approach each project with the same attention to detail and commitment to quality.',
+                'about-exp': '15+ Years Experience',
+                'about-licensed': 'Licensed & Insured',
+                'about-sustainable': 'Sustainable Practices',
+                'about-card-title': 'Handcrafted Excellence',
+                'about-card-subtitle': 'Every detail matters in our work',
+                // Gallery Section
+                'gallery-title': 'Our Work',
+                'gallery-view-more-btn': 'View More Projects',
+                // Contact Section
+                'contact-title': 'Get In Touch',
+                'contact-name-label': 'Name',
+                'contact-email-label': 'Email',
+                'contact-phone-label': 'Phone',
+                'contact-service-label': 'Service Interested In',
+                'contact-select-default': 'Select a service',
+                'contact-service-remodeling': 'Complete Remodeling',
+                'contact-service-furniture': 'Furniture Restoration',
+                'contact-service-solar': 'Solar Panel Installation',
+                'contact-service-roofing': 'Roofing & Tile Work',
+                'contact-service-plumbing': 'Plumbing & Wall Restoration',
+                'contact-service-custom': 'Custom Furniture',
+                'contact-message-label': 'Message',
+                'contact-send-btn': 'Send Message',
+                'contact-info-title': 'Contact Information',
+                'contact-location-title': 'Our Location',
+                'contact-location-address': '123 Construction Lane, Building City, BC 12345',
+                'contact-phone-title': 'Phone',
+                'contact-phone-number': '(123) 456-7890',
+                'contact-phone-hours': 'Mon-Fri: 8am-6pm',
+                'contact-email-title': 'Email',
+                'contact-email-address': 'contact@woodbrickconstruction.com',
+                'contact-follow-us-title': 'Follow Us',
+                // Footer
+                'footer-brand-name': 'Remodelaciones Asiáticas',
+                'footer-brand-tagline': 'Crafting spaces with natural warmth',
+                'footer-copyright': '© 2025 Remodelaciones Asiáticas All rights reserved.',
+                'footer-privacy': 'Privacy Policy',
+                'footer-terms': 'Terms of Service'
+            },
+            es: {
+                // Page Title
+                'page-title': 'Remodelaciones Asiáticas | Servicios Completos de Remodelación',
+                // Navigation
+                'brand-name': 'Remodelaciones Asiáticas',
+                'nav-services': 'Servicios',
+                'nav-about': 'Nosotros',
+                'nav-gallery': 'Galería',
+                'nav-contact': 'Contacto',
+                'mobile-nav-services': 'Servicios',
+                'mobile-nav-about': 'Nosotros',
+                'mobile-nav-gallery': 'Galería',
+                'mobile-nav-contact': 'Contacto',
+                // Hero Section
+                'hero-title': 'Creando los Espacios de Tus Sueños',
+                'hero-subtitle': 'Servicios expertos de remodelación y construcción con un toque natural de madera y ladrillo',
+                'hero-quote-btn': 'Obtén una Cotización Gratis',
+                'hero-services-btn': 'Nuestros Servicios',
+                // Services Section
+                'services-title': 'Nuestros Servicios Integrales',
+                'service1-title': 'Remodelación Completa',
+                'service1-description': 'Remodelación de servicio completo para estructuras pesadas y ligeras, transformando su espacio desde el concepto hasta la finalización.',
+                'service2-title': 'Restauración de Muebles',
+                'service2-description': 'Restauración experta de muebles de madera, dando nueva vida a sus piezas preciadas con artesanía tradicional.',
+                'service3-title': 'Instalación de Paneles Solares',
+                'service3-description': 'Instalación profesional de paneles fotovoltaicos (solares) para hacer su hogar energéticamente eficiente y sostenible.',
+                'service4-title': 'Trabajos de Techos y Azulejos',
+                'service4-description': 'Soluciones expertas en techos e instalación de azulejos para proteger y mejorar el exterior de su hogar.',
+                'service5-title': 'Fontanería y Restauración de Paredes',
+                'service5-description': 'Servicios de reemplazo de grifos y restauración de paredes para renovar el interior de su hogar con precisión y cuidado.',
+                'service6-title': 'Muebles Personalizados',
+                'service6-description': 'Armarios, cocinas, bibliotecas y muebles para el hogar hechos a medida según sus especificaciones y estilo exactos.',
+                // About Section
+                'about-title': 'Nuestra Historia y Filosofía',
+                'about-p1': 'Cultiva tu ser, armoniza tu hogar, mejora tu entorno y harás del mundo un mejor lugar.',
+                'about-p2': 'Esta antigua sabiduría de Confucio guía nuestro trabajo: creemos que cada transformación comienza desde adentro. Por eso, cada proyecto que realizamos refleja un equilibrio entre funcionalidad, estética y bienestar, respetando tanto la historia de quienes habitan un espacio como sus sueños futuros.',
+                'about-p3': 'Desde renovaciones completas de viviendas hasta piezas de mobiliario personalizadas, abordamos cada proyecto con la misma atención al detalle y compromiso con la calidad.',
+                'about-exp': 'Más de 15 Años de Experiencia',
+                'about-licensed': 'Licenciados y Asegurados',
+                'about-sustainable': 'Prácticas Sostenibles',
+                'about-card-title': 'Excelencia Artesanal',
+                'about-card-subtitle': 'Cada detalle importa en nuestro trabajo',
+                // Gallery Section
+                'gallery-title': 'Nuestro Trabajo',
+                'gallery-view-more-btn': 'Ver Más Proyectos',
+                // Contact Section
+                'contact-title': 'Ponte en Contacto',
+                'contact-name-label': 'Nombre',
+                'contact-email-label': 'Correo Electrónico',
+                'contact-phone-label': 'Teléfono',
+                'contact-service-label': 'Servicio de Interés',
+                'contact-select-default': 'Selecciona un servicio',
+                'contact-service-remodeling': 'Remodelación Completa',
+                'contact-service-furniture': 'Restauración de Muebles',
+                'contact-service-solar': 'Instalación de Paneles Solares',
+                'contact-service-roofing': 'Trabajos de Techos y Azulejos',
+                'contact-service-plumbing': 'Fontanería y Restauración de Paredes',
+                'contact-service-custom': 'Muebles Personalizados',
+                'contact-message-label': 'Mensaje',
+                'contact-send-btn': 'Enviar Mensaje',
+                'contact-info-title': 'Información de Contacto',
+                'contact-location-title': 'Nuestra Ubicación',
+                'contact-location-address': '123 Construction Lane, Ciudad de Construcción, BC 12345',
+                'contact-phone-title': 'Teléfono',
+                'contact-phone-number': '(123) 456-7890',
+                'contact-phone-hours': 'Lun-Vie: 8am-6pm',
+                'contact-email-title': 'Correo Electrónico',
+                'contact-email-address': 'contacto@woodbrickconstruction.com',
+                'contact-follow-us-title': 'Síguenos',
+                // Footer
+                'footer-brand-name': 'Remodelaciones Asiáticas',
+                'footer-brand-tagline': 'Creando espacios con calidez natural',
+                'footer-copyright': '© 2025 Remodelaciones Asiáticas Todos los derechos reservados.',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-terms': 'Términos de Servicio'
+            },
+            zh: {
+                // Page Title
+                'page-title': '亚洲改造 | 全方位服务改造',
+                // Navigation
+                'brand-name': '亚洲重塑',
+                'nav-services': '服务',
+                'nav-about': '关于我们',
+                'nav-gallery': '画廊',
+                'nav-contact': '联系我们',
+                'mobile-nav-services': '服务',
+                'mobile-nav-about': '关于我们',
+                'mobile-nav-gallery': '画廊',
+                'mobile-nav-contact': '联系我们',
+                // Hero Section
+                'hero-title': '打造您的梦想空间',
+                'hero-subtitle': '专业的改造和建筑服务，融入木材和砖块的自然触感',
+                'hero-quote-btn': '获取免费报价',
+                'hero-services-btn': '我们的服务',
+                // Services Section
+                'services-title': '我们的综合服务',
+                'service1-title': '全面改造',
+                'service1-description': '为重型和轻型结构提供全面的改造服务，将您的空间从概念到完工进行改造。',
+                'service2-title': '家具修复',
+                'service2-description': '专业的木制家具修复，以传统工艺为您的珍贵物品注入新生命。',
+                'service3-title': '太阳能板安装',
+                'service3-description': '专业安装光伏（太阳能）板，让您的家节能环保。',
+                'service4-title': '屋顶和瓷砖工程',
+                'service4-description': '专业的屋顶解决方案和瓷砖安装，保护和美化您的房屋外部。',
+                'service5-title': '管道和墙壁修复',
+                'service5-description': '水龙头更换和墙壁修复服务，以精确和细致的方式更新您的家居内部。',
+                'service6-title': '定制家具',
+                'service6-description': '根据您的确切规格和风格定制衣柜、厨房、书房和家用家具。',
+                // About Section
+                'about-title': '我们的故事与理念',
+                'about-p1': '修身养性，和谐家园，改善环境，世界就会变得更美好。',
+                'about-p2': '孔子的古老智慧指引着我们的工作：我们相信一切转变都源于内心。因此，我们承接的每一个项目都体现了功能性、美学和幸福感之间的平衡，既尊重居住者的历史，也尊重他们未来的梦想。',
+                'about-p3': '从完整的房屋翻新到定制家具，我们以同样的注重细节和对质量的承诺来对待每一个项目。',
+                'about-exp': '15年以上经验',
+                'about-licensed': '持证并投保',
+                'about-sustainable': '可持续实践',
+                'about-card-title': '精湛工艺',
+                'about-card-subtitle': '我们工作中每一个细节都很重要',
+                // Gallery Section
+                'gallery-title': '我们的作品',
+                'gallery-view-more-btn': '查看更多项目',
+                // Contact Section
+                'contact-title': '联系我们',
+                'contact-name-label': '姓名',
+                'contact-email-label': '电子邮件',
+                'contact-phone-label': '电话',
+                'contact-service-label': '感兴趣的服务',
+                'contact-select-default': '选择服务',
+                'contact-service-remodeling': '全面改造',
+                'contact-service-furniture': '家具修复',
+                'contact-service-solar': '太阳能板安装',
+                'contact-service-roofing': '屋顶和瓷砖工程',
+                'contact-service-plumbing': '管道和墙壁修复',
+                'contact-service-custom': '定制家具',
+                'contact-message-label': '留言',
+                'contact-send-btn': '发送消息',
+                'contact-info-title': '联系信息',
+                'contact-location-title': '我们的位置',
+                'contact-location-address': '123 Construction Lane, Building City, BC 12345',
+                'contact-phone-title': '电话',
+                'contact-phone-number': '(123) 456-7890',
+                'contact-phone-hours': '周一至周五：上午8点至下午6点',
+                'contact-email-title': '电子邮件',
+                'contact-email-address': 'contact@woodbrickconstruction.com',
+                'contact-follow-us-title': '关注我们',
+                // Footer
+                'footer-brand-name': '亚洲重塑',
+                'footer-brand-tagline': '用自然温暖打造空间',
+                'footer-copyright': '© 2025 Remodelaciones Asiáticas 保留所有权利。',
+                'footer-privacy': '隐私政策',
+                'footer-terms': '服务条款'
+            }
+        };
+
+        // Function to set the language
+        function setLanguage(lang) {
+            const elements = document.querySelectorAll('[id]');
+            elements.forEach(element => {
+                const id = element.id;
+                if (translations[lang] && translations[lang][id]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translations[lang][id];
+                    } else if (element.tagName === 'OPTION' && element.parentElement.id === 'service') {
+                        // Special handling for select options
+                        element.textContent = translations[lang][id];
+                    } else {
+                        element.textContent = translations[lang][id];
+                    }
+                }
+            });
+
+            // Update page title separately as it's in the head
+            const pageTitleElement = document.getElementById('page-title');
+            if (pageTitleElement && translations[lang] && translations[lang]['page-title']) {
+                pageTitleElement.textContent = translations[lang]['page-title'];
+            }
+
+            // Update the selected option in both language selectors
+            const desktopSelector = document.getElementById('language-selector');
+            const mobileSelector = document.getElementById('mobile-language-selector');
+            if (desktopSelector) desktopSelector.value = lang;
+            if (mobileSelector) mobileSelector.value = lang;
+
+            // Store selected language in local storage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -427,7 +639,7 @@
                 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 80, // Adjust for fixed header
                         behavior: 'smooth'
                     });
                     
@@ -437,6 +649,28 @@
                     }
                 }
             });
+        });
+
+        // Language selector event listeners
+        const desktopLanguageSelector = document.getElementById('language-selector');
+        const mobileLanguageSelector = document.getElementById('mobile-language-selector');
+
+        if (desktopLanguageSelector) {
+            desktopLanguageSelector.addEventListener('change', (event) => {
+                setLanguage(event.target.value);
+            });
+        }
+
+        if (mobileLanguageSelector) {
+            mobileLanguageSelector.addEventListener('change', (event) => {
+                setLanguage(event.target.value);
+            });
+        }
+
+        // Set initial language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'es'; // Default to Es
+            setLanguage(savedLanguage);
         });
     </script>
 </body>
