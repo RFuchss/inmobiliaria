@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wood & Brick Construction | Complete Remodeling Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .brick-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/brick-wall.png');
+        }
+        
+        .wood-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-amber-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-amber-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-hammer text-2xl text-amber-300"></i>
+                    <span class="text-xl font-bold">Wood & Brick Construction</span>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#services" class="hover:text-amber-300 transition">Services</a>
+                    <a href="#about" class="hover:text-amber-300 transition">About</a>
+                    <a href="#gallery" class="hover:text-amber-300 transition">Gallery</a>
+                    <a href="#contact" class="hover:text-amber-300 transition">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2 pb-2">
+                <a href="#services" class="block py-2 hover:text-amber-300 transition">Services</a>
+                <a href="#about" class="block py-2 hover:text-amber-300 transition">About</a>
+                <a href="#gallery" class="block py-2 hover:text-amber-300 transition">Gallery</a>
+                <a href="#contact" class="block py-2 hover:text-amber-300 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-20 md:py-32 relative">
+        <div class="container mx-auto px-4 text-center fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Crafting Your Dream Spaces</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expert remodeling and construction services with a natural touch of wood and brick</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Get a Free Quote</a>
+                <a href="#services" class="bg-transparent hover:bg-amber-900 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300">Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white brick-pattern">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900">Our Comprehensive Services</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-home text-amber-700 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-900">Complete Remodeling</h3>
+                        </div>
+                        <p class="text-gray-600">Full-service remodeling for both heavy and lightweight structures, transforming your space from concept to completion.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-couch text-amber-700 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-900">Furniture Restoration</h3>
+                        </div>
+                        <p class="text-gray-600">Expert restoration of wooden furniture, bringing new life to your cherished pieces with traditional craftsmanship.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-solar-panel text-amber-700 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-900">Solar Panel Installation</h3>
+                        </div>
+                        <p class="text-gray-600">Professional installation of photovoltaic (solar) panels to make your home energy efficient and sustainable.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-tools text-amber-700 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-900">Roofing & Tile Work</h3>
+                        </div>
+                        <p class="text-gray-600">Expert roofing solutions and tile installation to protect and enhance your home's exterior.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-bath text-amber-700 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-900">Plumbing & Wall Restoration</h3>
+                        </div>
+                        <p class="text-gray-600">Faucet replacement and wall restoration services to refresh your home's interior with precision and care.</p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3');"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-warehouse text-amber-700 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-amber-900">Custom Furniture</h3>
+                        </div>
+                        <p class="text-gray-600">Bespoke closets, kitchens, libraries and home furniture crafted to your exact specifications and style.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-amber-100 wood-pattern">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-amber-900">Our Story & Philosophy</h2>
+                    <p class="text-gray-700 mb-4">Founded on a passion for craftsmanship and natural materials, Wood & Brick Construction brings warmth and authenticity to every project we undertake.</p>
+                    <p class="text-gray-700 mb-4">We believe in the timeless beauty of wood and brick - materials that age gracefully and tell a story. Our team combines traditional techniques with modern innovation to create spaces that are both functional and full of character.</p>
+                    <p class="text-gray-700 mb-6">From complete home renovations to custom furniture pieces, we approach each project with the same attention to detail and commitment to quality.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-700 mr-2"></i>
+                            <span>15+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-700 mr-2"></i>
+                            <span>Licensed & Insured</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-amber-700 mr-2"></i>
+                            <span>Sustainable Practices</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 relative">
+                    <div class="relative rounded-lg overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3" alt="Carpenter at work" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-amber-900/50 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl font-bold">Handcrafted Excellence</h3>
+                            <p>Every detail matters in our work</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900">Our Work</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3" alt="Restored furniture" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600566752229-250dd4b1af7f?ixlib=rb-4.0.3" alt="Custom kitchen" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3" alt="Wooden library" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3" alt="House exterior" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3" alt="Bathroom remodel" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3" alt="Solar panel installation" class="w-full h-64 object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <a href="#" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    View More Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-amber-900">Get In Touch</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option value="">Select a service</option>
+                                <option value="remodeling">Complete Remodeling</option>
+                                <option value="furniture">Furniture Restoration</option>
+                                <option value="solar">Solar Panel Installation</option>
+                                <option value="roofing">Roofing & Tile Work</option>
+                                <option value="plumbing">Plumbing & Wall Restoration</option>
+                                <option value="custom">Custom Furniture</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-amber-50 p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-amber-900 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Our Location</h4>
+                                    <p class="text-gray-600">123 Construction Lane, Building City, BC 12345</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Phone</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                    <p class="text-gray-600">Mon-Fri: 8am-6pm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">contact@woodbrickconstruction.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-pinterest-p"></i>
+                                </a>
+                                <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-700 p-3 rounded-full transition duration-300">
+                                    <i class="fab fa-houzz"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-hammer text-2xl text-amber-300"></i>
+                        <span class="text-xl font-bold">Wood & Brick Construction</span>
+                    </div>
+                    <p class="text-amber-200 mt-2">Crafting spaces with natural warmth</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="mb-2">© 2023 Wood & Brick Construction. All rights reserved.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="text-amber-200 hover:text-white transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-amber-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
